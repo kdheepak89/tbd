@@ -52,7 +52,7 @@ def main(**kwargs):
             color = kwargs['verbose_color']
             click.echo("")
             for row_number, row in enumerate(array):
-                number_of_contributors = sum([float(item) for item in row[3:]])
+                number_of_contributors = int(sum([float(item) for item in row[3:]]))
 
                 click.secho("{number_of_contributors}".format(number_of_contributors=number_of_contributors), bold=True, fg=color, nl=False)
                 click.secho(" people owe ", nl=False)
